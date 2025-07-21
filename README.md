@@ -31,7 +31,7 @@ This study investigates how the volume and efficiency of three-point shooting re
 ## 📁 Files
 - `data/`: Cleaned CSV used for analysis
 - `poster/`: Final academic poster PDF
-- `report/`: Proposal, Preliminary Report
+- `report/`: Preliminary Report
 
 ## 📝 Citation
 Grimes, P. J. (2024). The NBA has a 3-pointer problem. *USA Today*. https://ftw.usatoday.com/2024/10/nba-three-pointers-record-attempts-problem
