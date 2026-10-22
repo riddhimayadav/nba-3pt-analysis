@@ -1,37 +1,30 @@
-# The Impact of Three-Point Shooting on NBA Team Success
+# Three-point shooting and NBA team success
+
+A statistical study of the relationship between three-point shooting and team win percentage across **150 team-seasons**, from **2019–20 through 2023–24**.
 
 **Author:** Riddhima Yadav  
-**Course:** SDS 320E – Spring 2025  
-**Instructor:** Professor Ragsdale
+**Course:** SDS 320E, Spring 2025
 
-## 📌 Project Overview
-This study investigates how the volume and efficiency of three-point shooting relate to NBA team success. Using data from the 2019–2024 NBA seasons, explore:
+## Questions and method
 
-- RQ1: Does the number of three-point attempts per game correlate with a team’s win percentage?
-- RQ2: Does a higher three-point shooting percentage lead to a higher win percentage?
+Using team statistics collected from Basketball Reference, the project asks whether three-point attempt volume and shooting-efficiency category are associated with win percentage. A linear model fitted in R includes attempts per game and high/low efficiency categories.
 
-## 📊 Dataset
-- Source: [Basketball Reference](https://www.basketball-reference.com)
-- 150 observations (team-seasons)
-- Variables: Win Percentage, Threes Attempted/Game, 3P Efficiency Category
+## Results
 
-## 📈 Methods
-- Tool: R (RStudio)
-- Analysis: General Linear Model
-- Visualization: Histograms, Boxplots, Scatterplots
+The fitted model estimates that the low-efficiency group has a win percentage **0.129 lower**, or approximately **12.9 percentage points lower**, than the high-efficiency group, holding attempt volume constant. Attempt volume is not statistically significant in that model (`p = 0.479`).
 
-## 📋 Key Results
-- **Efficiency matters more than volume**: Teams with high 3P efficiency win **13% more** on average.
-- **Volume alone isn't significant** in predicting win % when controlling for efficiency.
+These are observational associations. The model does not establish that changing three-point efficiency causes a particular increase in wins. The poster discusses omitted variables and repeated teams across seasons.
 
-## 🔍 Findings
-- Focus on improving **shot quality**, not just volume.
-- Strategy has implications for front-office decisions and player development.
+## Artifacts
 
-## 📁 Files
-- `data/`: Cleaned CSV used for analysis
-- `poster/`: Final academic poster PDF
-- `report/`: Preliminary Report
+- [Final poster](poster/Poster%20Report.pdf): model output, figures, and limitations.
+- [Preliminary report](report/Prelim%20Report.pdf): exploratory analysis and R code excerpts.
+- [Collected data](data/NBA%20Data%20Collection.csv): the analysis dataset.
+- `NBA Data Collection.xlsx`: the data collection workbook.
 
-## 📝 Citation
-Grimes, P. J. (2024). The NBA has a 3-pointer problem. *USA Today*. https://ftw.usatoday.com/2024/10/nba-three-pointers-record-attempts-problem
+The repository currently preserves the data and reports. It does not yet include a standalone R/RMarkdown script that reproduces the full final analysis; the code excerpts in the preliminary report are not a complete reproduction package.
+
+## Sources
+
+- [Basketball Reference](https://www.basketball-reference.com/) — team statistics.
+- Grimes, P. J. (2024). [The NBA has a 3-pointer problem](https://ftw.usatoday.com/2024/10/nba-three-pointers-record-attempts-problem), USA Today — project motivation.
